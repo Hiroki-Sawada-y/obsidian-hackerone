@@ -333,7 +333,7 @@ export default class H1ObsidianPlugin extends Plugin {
 		while (true) {
 			page += 1;
 			const response = await requestUrl({
-				url: `https://api.hackerone.com/v1/hackers/me/reports?page[size]=100&page[number]=${page}`,
+				url: `https://api.hackerone.com/v1/reports?filter[keyword]=xss&page[size]=100&page[number]=${page}`,
 				method: "GET",
 				headers: {
 
